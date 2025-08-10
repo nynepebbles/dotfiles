@@ -94,14 +94,10 @@ This should be enough for getting started. A complete list of keybindings can be
    $ chezmoi init https://github.com/nynepebbles/dotfiles.git
    ```
 
-2. **Init the configuration file**
+2. **Apply the configuration**
    ```bash
    # backup you old configs first, in case you need them back
+   $ mkdir -p .config/chezmoi
    $ chezmoi apply .config/chezmoi/chezmoi.toml
-    ```
-   
-2. **Init the remaining files**
-   ```bash
-   # backup you old configs first, in case you need them back
    $ chezmoi apply
     ```
