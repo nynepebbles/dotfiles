@@ -43,9 +43,7 @@ Here's a breakdown of the main software I use and configure in this repository:
 This should be enough for getting started. A complete list of keybindings can be found in `.config/hypr/hyprland.conf`
 
 ## Installation
-A basic NixOS 25.05 `configuration.nix` file with the needed changes can be seen [here](./etc/configuration.nix))
-
-0. Add the following to your `configuration.nix`
+1. Add the following to your `configuration.nix`
 
 ```nix
 
@@ -90,12 +88,12 @@ A basic NixOS 25.05 `configuration.nix` file with the needed changes can be seen
   programs.nix-ld.enable = true;
 ```
 
-1. **Init the repository with chezmoi**:
+2. **Init the repository with chezmoi**:
    ```bash
    $ chezmoi init https://github.com/nynepebbles/dotfiles.git
    ```
 
-2. **Apply the configuration**
+3. **Apply the configuration**
    ```bash
    # backup you old configs first, in case you need them back
    $ mkdir -p .config/chezmoi
