@@ -59,7 +59,7 @@ This should be enough for getting started. A complete list of keybindings can be
     cava neofetch cmatrix
 
     # programs
-    neovim chezmoi  hyprland eww kitty rofi pywal swww git gcc
+    neovim chezmoi  hyprland eww kitty rofi pywal swww git gcc clang-tools
     pywalfox-native # see the pywalfox firefox addon for theming your browser
 
     # For hyprland mapped keybindings and eww widgets
