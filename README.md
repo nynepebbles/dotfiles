@@ -1,4 +1,3 @@
-
 ```bash
 "There's no place like $HOME"
 ```
@@ -62,11 +61,11 @@ A basic NixOS 25.05 `configuration.nix` file with the needed changes can be seen
     cava neofetch cmatrix
 
     # programs
-    neovim chezmoi  hyprland eww kitty rofi pywal swww git
+    neovim chezmoi  hyprland eww kitty rofi pywal swww git gcc
     pywalfox-native # see the pywalfox firefox addon for theming your browser
 
     # For hyprland mapped keybindings and eww widgets
-    brightnessctl lm_sensors grim playerctl alsa-utils
+    brightnessctl lm_sensors grim playerctl alsa-utils python3 lua
 
     # optional
     # syncthing  # unneeded, but it autostarts in the defaults
@@ -84,20 +83,22 @@ A basic NixOS 25.05 `configuration.nix` file with the needed changes can be seen
   # users.users.your_username.shell = pkgs.fish;  # or only for your user
 
   # they need to be explicitly enabled
-  fish.enable = true;
-  hyprland.enable = true;
+  programs.fish.enable = true;
+  programs.hyprland.enable = true;
 
   # needed by mason on neovim
-  nix-ld.enable = true;
+  programs.nix-ld.enable = true;
 ```
 
-1. **Initialize chezmoi with this repository**:
+1. **Init the repository with chezmoi**:
    ```bash
-   $ chezmoi init --apply https://github.com/nynepebbles/dotfiles.git
+   $ chezmoi init https://github.com/nynepebbles/dotfiles.git
    ```
 
 2. **Apply the configuration**
    ```bash
    # backup you old configs first, in case you need them back
+   $ mkdir -p .config/chezmoi
+   $ chezmoi apply .config/chezmoi/chezmoi.toml
    $ chezmoi apply
     ```
