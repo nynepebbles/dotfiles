@@ -10,7 +10,7 @@
 
 # Dotfiles
 
-A collection of configuration files for a Linux desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
+A collection of reproducible configuration files for a Linux developer environment and desktop, built around NixOS and a curated list of programs and tools. Intended to be lightweight, visually clean, and easy to tweak.
   
 ## Features
 
