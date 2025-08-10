@@ -44,6 +44,8 @@ Here's a breakdown of the main software I use and configure in this repository:
 This should be enough for getting started. A complete list of keybindings can be found in `.config/hypr/hyprland.conf`
 
 ## Installation
+A basic NixOS 25.05 `configuration.nix` file with the needed changes can be seen [here](./etc/configuration.nix))
+
 0. Add the following to your `configuration.nix`
 
 ```nix
