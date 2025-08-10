@@ -10,7 +10,7 @@ export QT_STYLE_OVERRIDE='Adwaita-Dark'
 export GTK_THEME='Adwaita:dark'
 # export GTK2_RC_FILES='/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc'
 
-export CHEZMOI_SOURCE_PATH='{{ .chezmoi_source }}'
+## export CHEZMOI_SOURCE_PATH='{{ .chezmoi.sourceDir }}'
 
 set -g fish_preexec_interactive false
 
@@ -30,12 +30,11 @@ if status is-interactive
     zoxide init fish | source
     alias cd='z'
 
-    # function chezmoi_home
-    #     command chezmoi --source /cloud/home/dotfiles --destination /home/$USER $argv
-    # end
-
-    function chezmoi
-        command chezmoi --source /cloud/home/dotfiles --destination /cloud/home $argv
+    if test $USER = "nyne" # only for myself
+        echo nyne
+        function chezmoi
+            command chezmoi --source /cloud/home/dotfiles --destination /cloud/home $argv
+        end
     end
 
     #wal -R
