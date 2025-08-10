@@ -89,12 +89,18 @@ This should be enough for getting started. A complete list of keybindings can be
   nix-ld.enable = true;
 ```
 
-1. **Initialize chezmoi with this repository**:
+1. **Init the repository with chezmoi**:
    ```bash
-   $ chezmoi init --apply https://github.com/nynepebbles/dotfiles.git
+   $ chezmoi init https://github.com/nynepebbles/dotfiles.git
    ```
 
-2. **Apply the configuration**
+2. **Init the configuration file**
+   ```bash
+   # backup you old configs first, in case you need them back
+   $ chezmoi apply .config/chezmoi/chezmoi.toml
+    ```
+   
+2. **Init the remaining files**
    ```bash
    # backup you old configs first, in case you need them back
    $ chezmoi apply
