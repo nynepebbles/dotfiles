@@ -31,7 +31,6 @@ if status is-interactive
     alias cd='z'
 
     if test $USER = "nyne" # only for myself
-        echo nyne
         function chezmoi
             command chezmoi --source /cloud/home/dotfiles --destination /cloud/home $argv
         end
